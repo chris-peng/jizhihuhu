@@ -1,0 +1,43 @@
+version: '3'
+services:
+  wechaty:
+    image: "wechaty/wechaty:1.20"
+    container_name: wechaty
+    networks:
+      jizhihuhu:
+        ipv4_address: 172.22.0.3
+    environment:
+      TZ: Asia/Shanghai
+    env_file:
+      - myrobot.config
+    volumes:
+      - ./wechaty:/bot
+    command: ["bot.js"]
+    depends_on:
+      - aiservice
+
+  aiservice:
+    image: openjdk:17
+    container_name: aiservice
+    networks:
+      jizhihuhu:
+        ipv4_address: 172.22.0.2
+    expose:
+      - 8890
+    volumes:
+      - ./aiservice:/opt/app
+    working_dir: /opt/app
+    entrypoint: ["java", "-Dspring.profiles.active=production", "-jar", "aiservice.jar"]
+    environment:
+      TZ: Asia/Shanghai
+    env_file:
+      - myrobot.config
+    restart: always
+
+networks:
+  jizhihuhu:
+    ipam:
+      driver: default
+      config:
+        - subnet: "172.22.0.0/24"
+          gateway: 172.22.0.1
