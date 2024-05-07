@@ -9,7 +9,7 @@ services:
     environment:
       TZ: Asia/Shanghai
     env_file:
-      - myrobot.config
+      - robot.config
     volumes:
       - ./wechaty:/bot
     command: ["bot.js"]
@@ -31,7 +31,7 @@ services:
     environment:
       TZ: Asia/Shanghai
     env_file:
-      - myrobot.config
+      - robot.config
     restart: always
 
 networks:
