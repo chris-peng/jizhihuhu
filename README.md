@@ -57,7 +57,7 @@
 
       docker-compose logs -f wechaty
 
-然后可以开始使用了。
+然后可以尽情享用。
 
 其他有用的命令：
 
