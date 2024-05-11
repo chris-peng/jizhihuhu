@@ -43,9 +43,9 @@
       xunfeixinghuo_qps=2                                               # 每秒最多允许多少次回复，多出的回复将排队延迟发送，注意不要超过讯飞星火允许的 qps
       
       # chatgpt
-      chatgpt_api_base=https://api.openai.com/v1                        # chatgpt 接口地址，默认为openai官方地址，也可以用其他兼容openai接口的地址，比如nvidia llama3
-      chatgpt_token=<your token>                                        # chatgpt 接口token，需要在 openai 官网申请， ai_service 为chatgpt时，必填
-      chatgpt_model=gpt-3.5-turbo                                       # chatgpt 模型
+      chatgpt_api_base=https://api.openai.com/v1                        # chatgpt 接口地址，默认为openai官方地址，也可以用其他兼容openai接口的地址，比如nvidia llama3的https://integrate.api.nvidia.com/v1
+      chatgpt_token=<your api key>                                      # chatgpt 接口（或兼容接口）的 api key，需要在 openai 官网申请， ai_service 为chatgpt时，必填
+      chatgpt_model=gpt-3.5-turbo                                       # chatgpt（或其他兼容接口）的 模型
       chatgpt_temperature=0.5                                           # 机器人回复的温度，范围是0～1，数值越大表示回复越具有不确定性
       chatgpt_max_tokens=2048                                           # 机器人每次回复的最大token数
   
@@ -53,4 +53,15 @@
 
       docker-compose up -d
 
+然后执行命令查看 wechaty 的启动日志，待其展示出二维码后，使用微信扫码登录：
+
+      docker-compose logs -f wechaty
+
+然后可以开始使用了。
+
+其他有用的命令：
+
+      docker-compose down   # 停止服务。当修改配置文件后，需要停止然后再启动服务使其生效，重启后若之前已成功登录微信，则不需要再次登录
+      docker-compose logs -f aiservice   # 查看 ai 服务的日志
+      
   
