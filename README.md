@@ -9,7 +9,7 @@
 * 机智糊糊目前支持以 docker 方式运行，只要你的电脑/服务器支持 docker 和 docker-compose 就没问题
 
 ### 2. 安装前准备
-* 需要一个微信号，作为机器人，连接 AI 进行自动回复。虽然目前我在使用中还没有被封的情况，但还是建议使用不常用的微信号，比如可以[注册一个微信小号](https://www.36kr.com/p/2117021873817988)
+* 需要一个微信号，作为机器人，连接 AI 进行自动回复。虽然目前在使用中还没有被封的情况，但还是建议使用不常用的微信号，比如可以[注册一个微信小号](https://www.36kr.com/p/2117021873817988)(需要实名认证并绑定一张银行卡，否则可能无法登录)
 * 需要ChatGPT 或者 讯飞星火的 API 凭证，用来调用 AI 的 api，生成回复。目前只支持 ChatGPT(或其他兼容OpenAI 接口协议的大模型，比如 nvidia llama3) 和 讯飞星火，目前两者都有给新用户赠送一定的免费额度。可以访问其官网注册。
     * 注册 ChatGPT 及获取token，网上资料很多，可以参考这篇文章 https://blog.csdn.net/qq_51447436/article/details/134624252 ， ChatGPT 官网：https://openai.com （需要科学上网）
     * 注册 Nvidia, https://build.nvidia.com/explore/discover?signin=true , 然后点击代码示例上方的 Get API Key 即可
@@ -21,7 +21,7 @@
      * macOS，也是安装 docker-desktop 即可， 参考文档 https://docs.docker.com/desktop/install/mac-install/
      * linux，需要分别安装 docker 和 docker-compose
  
-* 下载机智糊糊最新版本的配置文件，解压之后，根据需要修改配置文件 `robot.config`:
+* 下载[机智糊糊最新版本](https://github.com/chris-peng/jizhihuhu/releases/latest)，解压之后，根据需要修改配置文件 `robot.config`:
   
       robot_name=机智糊糊       # 机器人的微信名
       robot_system_prompt=你的名字叫机智糊糊，是一个聪明可爱的AI助手，当有人@你的时候，请回答他。        # 给机器人的系统提示，可以告诉机器人自己叫什么，职责是什么等
