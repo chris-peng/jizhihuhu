@@ -15,7 +15,7 @@ wechaty
   .on('login', user => {
 		console.log(`User ${user} logged in`)
 		wechaty.Contact.find({name: process.env.test_user}).then((testContact) => {
-			setInterval(() => testContact.say('hello, 机智糊糊'), 24 * 3600 * 1000)
+			setInterval(() => testContact.say('hello, 机智糊糊'), 12 * 3600 * 1000)
 		})
   })
   .on('room-join', (room, inviteeList, inviter) => {
