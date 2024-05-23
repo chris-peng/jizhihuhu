@@ -24,10 +24,10 @@
 * 下载[机智糊糊最新版本](https://github.com/chris-peng/jizhihuhu/releases/latest)，解压之后，根据需要修改配置文件 `robot.config`:
   
       robot_name=机智糊糊       # 机器人的微信名
-      robot_system_prompt=你的名字叫机智糊糊，是一个聪明可爱的AI助手，当有人@你的时候，请回答他。        # 给机器人的系统提示，可以告诉机器人自己叫什么，职责是什么等
+      robot_system_prompt=你是一个开源机器人（https://github.com/chris-peng/jizhihuhu），名字叫机智糊糊，是一个聪明可爱的AI助手，当有人@你的时候，请回答他。        # 给机器人的系统提示，可以告诉机器人自己叫什么，职责是什么等
       introduce=大家好，我是机智糊糊，是一个智能机器人助手，虽然我有时会犯迷糊，但大多数时候我都机智的一匹！[得意]有什么问题可以随时@我哦。[害羞][害羞]       # 被邀进群自我介绍
       admin=管理员微信名                                                  # 管理员的微信名，管理员可以通过给机器人发送“开”或“关”控制机器人是否开启自动回复
-      test_user=文件传输助手                                              # 用来维持登录(否则长时间无对话可能会被强制下线)，机器人登录后，将每隔一天自动向该联系人发送一个 "hello, 机智糊糊"
+      test_user=微信团队                                              # 用来维持登录(否则长时间无对话可能会被强制下线)，机器人登录后，将每隔一天自动向该联系人发送一个 "hello, 机智糊糊"
       
       ai_service=xunfeixinghuo                                          # 选择ai模型，目前只支持讯飞星火xunfeixinghuo和chatgpt
       
