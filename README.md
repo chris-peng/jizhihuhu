@@ -29,7 +29,7 @@
       admin=管理员微信名                                                  # 管理员的微信名，管理员可以通过给机器人发送“开”或“关”控制机器人是否开启自动回复
       test_user=微信团队                                              # 用来维持登录(否则长时间无对话可能会被强制下线)，机器人登录后，将每隔12小时自动向该联系人发送一个 "hello, 机智糊糊"
       
-      ai_service=xunfeixinghuo                                          # 选择ai模型，目前只支持讯飞星火xunfeixinghuo和chatgpt
+      ai_service=xunfeixinghuo                                          # 选择ai服务，目前只支持讯飞星火xunfeixinghuo和chatgpt
       
       # 以下只需要填写选择的ai模型对应的配置项
       # xunfeixinghuo
